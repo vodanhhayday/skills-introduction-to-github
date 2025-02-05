@@ -16,11 +16,11 @@ jobs:
     # Add steps to the job
     # See: https://circleci.com/docs/jobs-steps/#steps-overview & https://circleci.com/docs/configuration-reference/#steps
     steps:
-      # Checkout the code as the first step.
+      # Checkout the code as the first step. "echo Hello, World!"
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World!"
+          command: " ls" 
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
